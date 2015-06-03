@@ -54,7 +54,7 @@
         <pre><code>{{ myModel | text:'snake' }}</code></pre>
 
         <h5>or in controler</h5>
-        <pre><code>$scope.test = $filter($scope.myModel)('snake');</code></pre>
+        <pre><code>$scope.test = $filter('text')($scope.myModel, 'snake');</code></pre>
         
         <h5>will output</h5>
         <pre><code>// example_text</code></pre>
