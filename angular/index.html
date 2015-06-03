@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>textural.js - simple text conversions to many different formats</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="../" class="navbar-brand">textural.js</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/angular">Use it with Angular</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://raw.githubusercontent.com/ivanblazevic/textural-js/master/textural.min.js"> <i aria-hidden="true" class="icon-install"></i> Download
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 100px">
+
+        <h3>1) Create custom angular filter</h3>
+        <p>After library is included to your project we can create custom angular filter that we are planing to use later in html or in controlers</p>
+        <pre><code>angular.module('myAngularApp')
+    .filter('text', function() {
+        return function(input, format) {
+            return textural(input).format(format);
+        }
+     });</code></pre>
+
+        <h3>2) Use it</h3>
+        <pre><code>$scope.myModel = 'exampleText'</code></pre>
+        
+        <h5>in html</h5>
+        <pre><code>{{ myModel | text:'snake' }}</code></pre>
+
+        <h5>or in controler</h5>
+        <pre><code>$scope.test = $filter($scope.myModel)('snake');</code></pre>
+        
+        <h5>will output</h5>
+        <pre><code>// example_text</code></pre>
+
+    </div>
+
+</body>
+</html>
