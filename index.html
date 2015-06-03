@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>textural.js - simple text conversions to many different formats</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="../" class="navbar-brand">textural.js</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/angular">Use it with Angular</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://raw.githubusercontent.com/ivanblazevic/textural-js/master/textural.min.js"> <i aria-hidden="true" class="icon-install"></i> Download
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 100px">
+
+        <div class="page-header" id="banner">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-6">
+                  <h1>textural.js</h1>
+                  <p class="lead">A javascript library for formatting and manipulating text.</p>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6">
+                    <pre><code>var sample = textural('sampleText').format('snake');<br/>// 'sample_text'</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-6">
+
+                <h3>How to use it</h3>
+
+                <h5>In browser</h5>
+                <pre><code>&lt;script src="textural.min.js"&gt; &lt;/script&gt;</code></pre>
+
+                <h5>In Node.js</h5>
+                <pre><code>npm install textural</code></pre>
+                <pre><code>var textural = require('textural');</code></pre>
+
+                <br/>
+
+                <div class="github-links">
+                    <a class="btn btn-default" href="https://github.com/ivanblazevic/textural-js"><i aria-hidden="true" class="icon-github"></i> Github</a>
+                    <a class="btn btn-default" href="https://raw.githubusercontent.com/ivanblazevic/textural-js/master/textural.js"><i aria-hidden="true" class="icon-install"></i> textural.js</a>
+                    <a class="btn btn-default" href="https://raw.githubusercontent.com/ivanblazevic/textural-js/master/textural.min.js"><i aria-hidden="true" class="icon-install"></i> textural.min.js</a>
+                </div>
+
+            </div>
+                        
+            <div class="col-lg-7 col-md-7 col-sm-6">
+      
+                <h3>Format</h3>
+
+                <p>Text can be formatted to any know format such as camelCase, snake_case, slug-case, human case.
+                </p>
+
+                <p><b>Note: </b>you can use <i>upper</i>, <i>lower</i> and <i>capitalize</i> prefix for any kind of
+                    format, e.g <b>uppersnake</b> will produce: SNAKE_CASE
+                </p>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>camel</td>
+                            <td>exampleText</td>
+                        </tr>
+                        <tr>
+                            <td>snake</td>
+                            <td>example_text</td>
+                        </tr>
+                        <tr>
+                            <td>slug</td>
+                            <td>example-text</td>
+                        </tr>
+                        <tr>
+                            <td>human</td>
+                            <td>example text</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h5>Example with upper prefix</h5>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>uppersnake</td>
+                            <td>EXAMPLE_TEXT</td>
+                        </tr>
+                        <tr>
+                            <td>lowersnake</td>
+                            <td>example_text</td>
+                        </tr>
+                        <tr>
+                            <td>capitalizesnake</td>
+                            <td>Example_Text</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Acknowlegements</h3>
+                <p>textural.js was inspired by and heavily borrowed from <a href="http://numeraljs.com/">numeral.js</a></p>
+      
+            </div>
+        </div>
+
+        <footer></footer>
+
+    </div>
+
+</body>
+</html>
