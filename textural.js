@@ -28,13 +28,19 @@
     // version number
     textural.version = VERSION;
 
+    function capitalize (string) {
+        return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+    }
+
     function transform (input, format) {
         
         // replace - or _ to space
         var parsed = input.replace(/-|_/g, ' ');
         
         // if no snake or slug case found, try to parse camel case
-        if (parsed.indexOf(' ') < 0) {
+        // second condition means we need to have at least one lower character
+        // before upper character in order to properly detect camelCase
+        if (parsed.indexOf(' ') < 0 && /[a-z][A-Z]/g.exec(parsed)) {
             parsed = parsed.replace(/[A-Z]/g, ' $&');
         }
         parsed = parsed.toLowerCase();
@@ -47,7 +53,20 @@
         var isLower = format.indexOf('lower') > -1;
         if (isLower) format = format.replace('lower', '');
 
+        // handle if format should be capitalized
+        var isCapitalize = format.indexOf('capitalize') > -1;
+        if (isCapitalize) format = format.replace('capitalize', '');
+
+        // handle truncate
+        var truncateLength = 0;
+        if (/t\d.*/.exec(format)) {
+            var truncateLength = parseInt(format.replace('t', ''));
+            format = 'truncate';
+        }
+
         switch(format) {
+            case 'truncate':
+                parsed = String(parsed).substring(0, truncateLength)
             case 'slug':
                 parsed = parsed.replace(/ /g, '-')
                 break;
@@ -65,6 +84,8 @@
             return parsed.toUpperCase();
         } else if (isLower) {
             return parsed.toLowerCase();
+        } else if (isCapitalize) {
+            return capitalize(parsed);
         } else {
             return parsed;
         }
