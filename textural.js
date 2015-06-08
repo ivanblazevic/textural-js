@@ -1,6 +1,6 @@
 /*!
  * textural.js
- * version : 0.0.1
+ * version : 0.0.3
  * author : Ivan Blazevic
  * license : MIT
  * http://ivanblazevic.github.com/textural-js/
