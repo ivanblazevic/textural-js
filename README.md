@@ -14,8 +14,8 @@
 
 ###Example###
 
-`var sample = textural('sampleText').format('snake');`
-`// 'sample_text'	
+`var sample = textural('sampleText').format('snake');`<br/>
+`// 'sample_text'`
 
 
 #####Format
