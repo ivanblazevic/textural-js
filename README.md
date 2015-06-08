@@ -1,3 +1,97 @@
+#textural.js#
+##A javascript library for formatting and manipulating text.##
+
+
+###How to use it###
+#####In browser#####
+
+`<script src="textural.min.js"> </script>`
+#####In Node.js#####
+
+`npm install textural`
+`var textural = require('textural');`
+
+
+###Example###
+
+`var sample = textural('sampleText').format('snake');`
+`// 'sample_text'	
+
+
+#####Format
+Text can be formatted to any know format such as camelCase, snake_case, slug-case, human case.
+
+Note: you can use upper, lower and capitalize prefix for any kind of format, e.g uppersnake will produce: SNAKE_CASE
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th width="300">Description</th>
+            <th>Format</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>convert to camelCase</td>
+            <td>camel</td>
+            <td>exampleText</td>
+        </tr>
+        <tr>
+            <td>convert to snake_case</td>
+            <td>snake</td>
+            <td>example_text</td>
+        </tr>
+        <tr>
+            <td>convert to slug-case</td>
+            <td>slug</td>
+            <td>example-text</td>
+        </tr>
+        <tr>
+            <td>convert to normal text</td>
+            <td>human</td>
+            <td>example text</td>
+        </tr>
+        <tr>
+            <td>truncate letters (change number after t according to your needs)</td>
+            <td>t3</td>
+            <td>exa</td>
+        </tr>
+    </tbody>
+</table>
+
+
+#####Example with upper prefix
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Format</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>uppersnake</td>
+            <td>EXAMPLE_TEXT</td>
+        </tr>
+        <tr>
+            <td>lowersnake</td>
+            <td>example_text</td>
+        </tr>
+        <tr>
+            <td>capitalizesnake</td>
+            <td>Example_Text</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+##http://www.texturaljs.com###
+
+
+
+
 The MIT License
 
 Copyright (c) 2015 Ivan Blazevic
