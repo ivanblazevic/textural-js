@@ -8,7 +8,7 @@
 `<script src="textural.min.js"> </script>`
 #####In Node.js#####
 
-`npm install textural`
+`npm install textural`<br/>
 `var textural = require('textural');`
 
 
