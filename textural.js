@@ -1,9 +1,10 @@
 /*!
  * textural.js
- * version : 0.0.3
+ * version : 0.0.4
  * author : Ivan Blazevic
  * license : MIT
- * http://ivanblazevic.github.com/textural-js/
+ * git: https://github.com/ivanblazevic/textural-js
+ * web: http://www.texturaljs.com
  */
 
 (function () {
@@ -13,7 +14,7 @@
     ************************************/
 
     var textural,
-        VERSION = '0.0.1',
+        VERSION = '0.0.4',
         // check for nodeJS
         hasModule = (typeof module !== 'undefined' && module.exports);
 

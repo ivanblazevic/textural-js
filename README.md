@@ -2,17 +2,17 @@
 ##A javascript library for formatting and manipulating text.##
 
 
-###How to use it###
-#####In browser#####
+###How to use it
+#####In browser
 
 `<script src="textural.min.js"> </script>`
-#####In Node.js#####
+#####In Node.js
 
 `npm install textural`<br/>
 `var textural = require('textural');`
 
 
-###Example###
+###Example
 
 `var sample = textural('sampleText').format('snake');`<br/>
 `// 'sample_text'`
@@ -85,6 +85,28 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
     </tbody>
 </table>
 
+##Use it with angular
+
+<h3>1) Create custom angular filter</h3>
+<p>After library is included to your project we can create custom angular filter that we are planing to use later in html or in controlers</p>
+<pre><code>angular.module('myAngularApp')
+.filter('text', function() {
+    return function(input, format) {
+        return textural(input).format(format);
+    }
+ });</code></pre>
+
+<h3>2) Use it</h3>
+<pre><code>$scope.myModel = 'exampleText'</code></pre>
+
+<h5>in html</h5>
+<pre><code>{{ myModel | text:'snake' }}</code></pre>
+
+<h5>or in controler</h5>
+<pre><code>$scope.test = $filter('text')($scope.myModel, 'snake');</code></pre>
+
+<h5>will output</h5>
+<pre><code>// example_text</code></pre>
 
 
 ##http://www.texturaljs.com###
