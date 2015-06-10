@@ -2,23 +2,23 @@
 ##A javascript library for formatting and manipulating text.##
 
 
-###How to use it
-#####In browser
+<h2>How to use it</h2>
+<h5>In browser</h5>
 
 `<script src="textural.min.js"> </script>`
-#####In Node.js
+<h5>In Node.js</h5>
 
 `npm install textural`<br/>
 `var textural = require('textural');`
 
 
-###Example
+<h3>Example</h3>
 
 `var sample = textural('sampleText').format('snake');`<br/>
 `// 'sample_text'`
 
 
-#####Format
+<h5>Format</h5>
 Text can be formatted to any know format such as camelCase, snake_case, slug-case, human case.
 
 Note: you can use upper, lower and capitalize prefix for any kind of format, e.g uppersnake will produce: SNAKE_CASE
@@ -61,7 +61,7 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
 </table>
 
 
-#####Example with upper prefix
+<h5>Example with upper prefix</h5>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -85,7 +85,7 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
     </tbody>
 </table>
 
-##Use it with angular
+<h2>Use it with angular</h2>
 
 <h3>1) Create custom angular filter</h3>
 <p>After library is included to your project we can create custom angular filter that we are planing to use later in html or in controlers</p>
@@ -109,7 +109,9 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
 <pre><code>// example_text</code></pre>
 
 
-##http://www.texturaljs.com###
+<h2>http://www.texturaljs.com</h2>
+
+
 
 
 
