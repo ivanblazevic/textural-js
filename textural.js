@@ -1,6 +1,6 @@
 /*!
  * textural.js
- * version : 0.0.5
+ * version : 0.1.0
  * author : Ivan Blazevic
  * license : MIT
  * git: https://github.com/ivanblazevic/textural-js
@@ -14,7 +14,7 @@
     ************************************/
 
     var textural,
-        VERSION = '0.0.5',
+        VERSION = '0.1.0',
         // check for nodeJS
         hasModule = (typeof module !== 'undefined' && module.exports);
 
@@ -34,7 +34,14 @@
     }
 
     function transform (input, format) {
-        
+
+        var nullHandler = format.match(/\((.*?)\)$/);
+        // match if null handler is set
+        if (nullHandler) {
+            format = format.replace(/\(.*?\)$/, '');
+            nullHandler = nullHandler[1];
+        }
+
         // replace - or _ to space
         var parsed = input.replace(/-|_/g, ' ');
         
@@ -80,7 +87,12 @@
             default:
                 parsed;
         }
-        
+
+        // if should handle null values
+        if (nullHandler && !parsed) {
+            return nullHandler;
+        }
+
         if (isUpper) {
             return parsed.toUpperCase();
         } else if (isLower) {

@@ -19,7 +19,7 @@
 
 
 <h5>Format</h5>
-Text can be formatted to any know format such as camelCase, snake_case, slug-case, human case.
+Text can be formatted to any known format such as camelCase, snake_case, slug-case, human case.
 
 Note: you can use upper, lower and capitalize prefix for any kind of format, e.g uppersnake will produce: SNAKE_CASE
 
@@ -60,8 +60,8 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
     </tbody>
 </table>
 
+<h4>Examples with prefix</h4>
 
-<h5>Example with upper prefix</h5>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -81,6 +81,28 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
         <tr>
             <td>capitalizesnake</td>
             <td>Example_Text</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Null handler (value to return if no text present)</h4>
+<p><b>Note: </b><i>null handler</i> should be set always at the end of format string, you can put any text you like inside parentheses and also it can be added to any type of format
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Format</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>(-)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>lowersnake(No value)</td>
+            <td>No value</td>
         </tr>
     </tbody>
 </table>
