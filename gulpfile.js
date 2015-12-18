@@ -33,7 +33,9 @@ gulp.task('unit', function () {
 
 gulp.task('test', ['jshint', 'unit']);
 
-gulp.src('test/coverage/**/lcov.info')
-    .pipe(coveralls());
+gulp.task('coveralls', ['test'], function() {
+    return gulp.src('./coverage/lcov.info')
+        .pipe(coveralls());
+});
 
-gulp.task('default', ['minify-js', 'test']);
+gulp.task('default', ['minify-js', 'coveralls']);
