@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
     nodeunit = require('gulp-nodeunit'),
+    cover = require('gulp-coverage'),
     coveralls = require('gulp-coveralls');
 
 gulp.task('minify-js', function() {
@@ -23,19 +24,20 @@ gulp.task('jshint', function () {
 
 gulp.task('unit', function () {
     return gulp.src('tests/*.js')
+        .pipe(cover.instrument({
+            pattern: ['textural.js']
+        }))
         .pipe(nodeunit({
             reporter: 'junit',
             reporterOptions: {
                 output: 'test'
             }
-        }));
+        }))
+        .pipe(cover.gather())
+        .pipe(cover.format({ reporter: 'lcov' }))
+        .pipe(coveralls());
 });
 
 gulp.task('test', ['jshint', 'unit']);
 
-gulp.task('coveralls', ['test'], function() {
-    return gulp.src('./coverage/lcov.info')
-        .pipe(coveralls());
-});
-
-gulp.task('default', ['minify-js', 'coveralls']);
+gulp.task('default', ['minify-js', 'test']);

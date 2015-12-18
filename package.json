@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.8.11",
+    "gulp-coverage": "^0.3.38",
     "gulp-coveralls": "^0.1.4",
     "gulp-jshint": "^2.0.0",
     "gulp-nodeunit": "0.0.5",
