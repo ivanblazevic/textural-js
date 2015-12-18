@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
-    nodeunit = require('gulp-nodeunit');
+    nodeunit = require('gulp-nodeunit'),
+    coveralls = require('gulp-coveralls');
 
 gulp.task('minify-js', function() {
   return gulp.src('textural.js')
@@ -32,4 +33,7 @@ gulp.task('unit', function () {
 
 gulp.task('test', ['jshint', 'unit']);
 
-gulp.task('default', ['minify-js']);
+gulp.src('test/coverage/**/lcov.info')
+    .pipe(coveralls());
+
+gulp.task('default', ['minify-js', 'test']);
