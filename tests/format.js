@@ -20,8 +20,10 @@ exports.format = {
 
         test.strictEqual(textural('').format('(-)'), '-');
         test.strictEqual(textural('').format('lowersnake(No value)'), 'No value');
+        test.strictEqual(textural(123).format('lowersnake(No value)'), 123);
+        test.strictEqual(textural('').format('snake'), '');
 
-        test.expect(tests.length + 2);
+        test.expect(tests.length + 4);
 
         test.done();
     }
