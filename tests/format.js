@@ -14,11 +14,14 @@ exports.format = {
             ['capitalizesnake', 'Example_text']
         ]
 
-        test.expect(tests.length);
-
         for (i = 0; i < tests.length; i++) {
             test.strictEqual(textural('exampleText').format(tests[i][0]), tests[i][1]);
         }
+
+        test.strictEqual(textural('').format('(-)'), '-');
+        test.strictEqual(textural('').format('lowersnake(No value)'), 'No value');
+
+        test.expect(tests.length + 2);
 
         test.done();
     }
