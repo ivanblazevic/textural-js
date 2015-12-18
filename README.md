@@ -1,6 +1,7 @@
 #textural.js#
 ##A javascript library for formatting and manipulating text.##
 
+[![Build Status](https://travis-ci.org/ivanblazevic/textural-js.svg?branch=master)](https://travis-ci.org/ivanblazevic/textural-js)
 
 <h2>How to use it</h2>
 <h5>In browser</h5>
