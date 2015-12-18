@@ -22,8 +22,9 @@ exports.format = {
         test.strictEqual(textural('').format('lowersnake(No value)'), 'No value');
         test.strictEqual(textural(123).format('lowersnake(No value)'), 123);
         test.strictEqual(textural('').format('snake'), '');
+        test.ok(require('../textural'));
 
-        test.expect(tests.length + 4);
+        test.expect(tests.length + 5);
 
         test.done();
     }
