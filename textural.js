@@ -1,6 +1,6 @@
 /*!
  * textural.js
- * version : 0.1.1
+ * version : 0.1.2
  * author : Ivan Blazevic
  * license : MIT
  * git: https://github.com/ivanblazevic/textural-js
@@ -14,7 +14,7 @@
     ************************************/
 
     var textural,
-        VERSION = '0.1.1',
+        VERSION = '0.1.2',
         // check for nodeJS
         hasModule = (typeof module !== 'undefined' && module.exports);
 
@@ -38,7 +38,6 @@
     }
 
     function textParser(input, format) {
-
         // replace '-' or '_' to ' '
         var parsed = input.replace(/-|_/g, ' ');
         
@@ -65,24 +64,23 @@
         // handle truncate
         var truncateLength = 0;
         if (/t\d.*/.exec(format)) {
-            var truncateLength = parseInt(format.replace('t', ''));
+            truncateLength = parseInt(format.replace('t', ''));
             format = 'truncate';
         }
 
         switch(format) {
             case 'truncate':
-                parsed = String(parsed).substring(0, truncateLength)
+                parsed = String(parsed).substring(0, truncateLength);
+                break;
             case 'slug':
-                parsed = parsed.replace(/ /g, '-')
+                parsed = parsed.replace(/ /g, '-');
                 break;
             case 'snake':
-                parsed = parsed.replace(/ /g, '_')
+                parsed = parsed.replace(/ /g, '_');
                 break;
             case 'camel':
-                parsed = parsed.replace(/ ./g, function (search) { return search.replace(' ', '').toUpperCase();})
+                parsed = parsed.replace(/ ./g, function (search) { return search.replace(' ', '').toUpperCase();});
                 break;
-            default:
-                parsed;
         }
 
         if (isUpper) {
@@ -153,7 +151,7 @@
         // here, `this` means `window` in the browser, or `global` on the server
         // add `textural` as a global object via a string identifier,
         // for Closure Compiler 'advanced' mode
-        this['textural'] = textural;
+        this.textural = textural;
     }
 
     /*global define:false */

@@ -1,6 +1,6 @@
 {
   "name": "textural-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A javascript library for formatting and manipulating text.",
   "main": "gulpfile.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.8.11",
+    "gulp-jshint": "^2.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.0.0"
   }
