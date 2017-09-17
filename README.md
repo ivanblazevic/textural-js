@@ -1,8 +1,8 @@
 #textural.js#
 ##A javascript library for formatting and manipulating text.##
 
-[![Build Status](https://travis-ci.org/ivanblazevic/textural-js.svg?branch=master)](https://travis-ci.org/ivanblazevic/textural-js) 
-[![Coverage Status](https://coveralls.io/repos/ivanblazevic/textural-js/badge.svg?branch=master&service=github)](https://coveralls.io/github/ivanblazevic/textural-js?branch=master) 
+[![Build Status](https://travis-ci.org/ivanblazevic/textural-js.svg?branch=master)](https://travis-ci.org/ivanblazevic/textural-js)
+[![Coverage Status](https://coveralls.io/repos/ivanblazevic/textural-js/badge.svg?branch=master&service=github)](https://coveralls.io/github/ivanblazevic/textural-js?branch=master)
 <img src="https://david-dm.org/ivanblazevic/textural-js.svg"/>
 
 
@@ -135,7 +135,7 @@ Note: you can use upper, lower and capitalize prefix for any kind of format, e.g
 <pre><code>// example_text</code></pre>
 
 
-<h2>http://www.texturaljs.com</h2>
+<a>http://ivanblazevic.github.io/textural-js/</a>
 
 
 
