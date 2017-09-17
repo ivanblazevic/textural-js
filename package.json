@@ -1,20 +1,31 @@
 {
-  "name": "textural-js",
-  "version": "0.1.6",
-  "description": "A javascript library for formatting and manipulating text.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ivan Blazevic",
-  "license": "MIT",
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-coverage": "^0.3.38",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-jshint": "^2.0.0",
-    "gulp-nodeunit": "0.0.5",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.0.0"
-  }
+    "name": "textural-js",
+    "version": "0.1.7",
+    "description": "A javascript library for formatting and manipulating text.",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ivan Blazevic",
+    "license": "MIT",
+    "dependencies": {
+        "gulp": "^3.8.11",
+        "gulp-coverage": "^0.3.38",
+        "gulp-coveralls": "^0.1.4",
+        "gulp-jshint": "^2.0.0",
+        "gulp-nodeunit": "0.0.5",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^1.0.0"
+    },
+    "keywords": [
+        "text",
+        "snake-case",
+        "camel-case",
+        "convert",
+        "format",
+        "pascal-case",
+        "string",
+        "string-manipulation",
+        "js"
+    ]
 }
