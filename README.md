@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/ivanblazevic/textural-js.svg?branch=master)](https://travis-ci.org/ivanblazevic/textural-js)
 [![Coverage Status](https://coveralls.io/repos/ivanblazevic/textural-js/badge.svg?branch=master&service=github)](https://coveralls.io/github/ivanblazevic/textural-js?branch=master)
-<img src="https://david-dm.org/ivanblazevic/textural-js.svg"/>
+<img src="https://david-dm.org/ivanblazevic/textural-js.svg"/> [![npm version](https://badge.fury.io/js/textural-js.svg)](https://badge.fury.io/js/textural-js)
 
 
 <h2>How to use it</h2>
