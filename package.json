@@ -1,8 +1,8 @@
 {
     "name": "textural-js",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "A javascript library for formatting and manipulating text.",
-    "main": "gulpfile.js",
+    "main": "textural.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
